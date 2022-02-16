@@ -28,8 +28,8 @@ const handleUserInput = function (key) {
   if (key === 's') {
     action = "Move: down"
   }
-  if (key === 'a') {
-    action = "Move: left"
+  if (key === 'm') {
+    action = "Say: Move, please!"
   }
   connection.write(action);
 };
