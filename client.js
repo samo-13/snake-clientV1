@@ -1,3 +1,4 @@
+const { setupInput } = require('./input');
 const net = require("net");
 // establishes a connection with the game server
 const connect = function () {
@@ -30,23 +31,9 @@ return conn;
 console.log("Connecting ...")
 connect();
 
-const setupInput = function () {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.resume();
-  stdin.on("data", handleUserInput);
-  return stdin;
-};
 
-const handleUserInput = function (key) {
-  if (key === '\u0003') {
-    process.exit();
-  }
-};
 
 module.exports = connect;
-module.exports = setupInput; 
 
 
 // Supported move commands:
