@@ -1,5 +1,7 @@
 
 const { connect } = require('./client');
+const { setupInput } = require('./client');
 
-// client.write ('Name: Samo')
-// client.write ('Move: Up')
+// setup interface to handle user input from stdin
+
+
