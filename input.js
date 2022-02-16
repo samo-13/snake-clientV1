@@ -6,10 +6,10 @@ const setupInput = function(conn) {
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
+  stdin.resume();
   stdin.on("data", function(key) { 
     handleUserInput(key);
   })
-  stdin.resume();
   return stdin;
 };
 
